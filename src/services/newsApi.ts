@@ -12,7 +12,9 @@ const GNEWS_API_KEY = import.meta.env.VITE_GNEWS_API_KEY;
 // Debug logging
 console.log('API Keys loaded:', {
   newsApi: NEWS_API_KEY ? `${NEWS_API_KEY.substring(0, 8)}...` : 'Not found',
-  gnews: GNEWS_API_KEY ? `${GNEWS_API_KEY.substring(0, 8)}...` : 'Not found'
+  gnews: GNEWS_API_KEY ? `${GNEWS_API_KEY.substring(0, 8)}...` : 'Not found',
+  newsApiLength: NEWS_API_KEY?.length,
+  gnewsApiLength: GNEWS_API_KEY?.length
 });
 
 interface NewsAPIResponse {
