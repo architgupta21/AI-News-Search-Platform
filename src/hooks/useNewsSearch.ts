@@ -65,11 +65,6 @@ export const useNewsSearch = () => {
         results.sort((a, b) => b.aiScore - a.aiScore);
       }
 
-      // Ensure minimum 3 results
-      if (results.length < 3) {
-        throw new Error('Insufficient results found. Please try a different search term or check your API configuration.');
-      }
-
       setArticles(results);
     } catch (err: any) {
       console.error('Search error:', err);
